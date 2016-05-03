@@ -1,0 +1,21 @@
+{
+  "name": "notifydriver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Najla KANOUT, Faisal KANOUT",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^6.2.0",
+    "mongoose": "^4.4.14",
+    "nodemailer": "^2.3.2",
+    "path": "^0.12.7"
+  }
+}
