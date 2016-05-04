@@ -9,10 +9,18 @@ var config 		= require('./config');
 
 // Enviroment varibales 
 //------------------------------------------
-var PORT 			= process.env.PORT || 8080;
-var SECRET 			= process.env.SECRET || config.SECRET;
-var SECRET_EMAIL 	= process.env.SECRET_EMAIL || config.SECRET_EMAIL;
-var DATABASE		= process.env.DATABASE || config.DATABASE;
+var PORT 			= process.env.PORT 			|| 8080;
+var SECRET 			= process.env.SECRET 		|| config.SECRET;
+var SECRET_EMAIL 	= process.env.SECRET_EMAIL 	|| config.SECRET_EMAIL;
+var DATABASE		= process.env.DATABASE 		|| config.DATABASE;
+
+
+// The controllers
+//------------------------------------------
+var ctrlUserSignup 		= require('./controllers/user/signup');
+var ctrlUserSendEmail	= require('./controllers/user/sendEmail');
+var ctrlUserVerifyEmail = require('./controllers/user/verifyEmail');
+var ctrlUserAuthenticate= require('./controllers/user/auth');
 
 // Prepare Express server
 //------------------------------------------
@@ -30,7 +38,26 @@ mongoose.connect(DATABASE,function(err){
 	console.log("DATABASE is connceted successfully ! ");
 });
 
+app.get('/',function(req,res){
+	res.json({
+		msg:'welcome to server'
+	});
+});
+
+
+// The routes
+//------------------------------------------
+
+app.post('/signup', ctrlUserSignup);
+app.post('/authenticate', ctrlUserAuthenticate);
+app.get('/verify', ctrlUserVerifyEmail);
+
+
+
+
+
+// Run the server
+//------------------------------------------
 app.listen(PORT,function(err){
 	console.log('The server is running on http://localhost:' + PORT);
-
 });
