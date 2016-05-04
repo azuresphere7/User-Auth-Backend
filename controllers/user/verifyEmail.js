@@ -13,7 +13,8 @@ module.exports = function(req, res) {
                     success: false,
                     message: 'Your token id is not valid !'
                 });
-            } else {
+            };
+            if (payload) {
                 if (payload.subject == 'verifyEmail') {
                     user.findOne({
                         $and: [{ username: payload.username }, { 'meta.id': payload.id }]

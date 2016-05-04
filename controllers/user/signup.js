@@ -35,6 +35,7 @@ module.exports = function(req, res) {
                         if (err) throw err;
                         res.status(201).send({
                             success: true,
+                            username: myUsername,
                             message: 'User created successfully'
                         });
                     });
