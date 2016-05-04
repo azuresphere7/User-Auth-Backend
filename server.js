@@ -20,7 +20,7 @@ var ctrlUserVerifyEmail = require('./controllers/user/verifyEmail');
 var ctrlUserSignin		= require('./controllers/user/signin');
 var ctrlUserAuthenticate= require('./controllers/user/authenticate');
 var ctrlApiUserData 	= require('./controllers/user/apiUserProfile');
-
+var ctrlUertRestPass	= require('./controllers/user/resetPass');
 // Prepare Express server
 //------------------------------------------
 var app = express();
@@ -46,7 +46,7 @@ app.get('/verify', ctrlUserVerifyEmail);
 app.get('/',function(req,res){res.json({msg:'welcome to server'});});
 
 app.post('/signup', ctrlUserSignup);
-
+app.post('/resetpass', ctrlUertRestPass);
 
 //with authentication
 //------------------------------------------
