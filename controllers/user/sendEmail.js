@@ -15,7 +15,7 @@ var send = function(payload, callback) {
     	var mailOptions = {
             from: '"FaisalKANOUT 👥" <foo@blurdybloop.com>', // sender address
             to: 'f.kanout@gmail.com', // list of receivers
-            subject: 'Reset accounts password'+, // Subject line
+            subject: 'Reset accounts password', // Subject line
             text: 'Hello', // plaintext body
             html: '<h2> Hello ' + myUsername + '</h2>' +
                 '<br> Please click on the link to reset you account password :<br>' +

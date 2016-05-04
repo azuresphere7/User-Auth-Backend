@@ -3,9 +3,9 @@ var user = require(require('path').dirname(require.main.filename) + '/models/use
 var sendEmail = require(require('path').dirname(require.main.filename) + '/controllers/user/sendEmail'); // get the mongoose model
 
 module.exports = function(req, res) {
-    myUsername = (req.body.username).toLowerCase();
-    myPassword = req.body.password;
-    if ((myUsername) && (myPassword)) {
+    if ((req.body.username) && (req.body.password)) {
+        myUsername = (req.body.username).toLowerCase();
+        myPassword = req.body.password;
         user.findOne({ username: myUsername }, function(err, myUser) {
             if (err) throw err;
             if (myUser) {

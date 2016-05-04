@@ -45,13 +45,30 @@ module.exports = function(req, res) {
                         }
                     });
 
-                } else {
-                    res.status(403).send({
-                        success: false,
-                        message: 'Unknown token subject !'
+                };
+                if (payload.subject == 'changePassword') {
+                    user.findOne({
+                        $and: [{ username: payload.username }, { 'meta.id': payload.id }]
+                    }, function(err, user) {
+                        if (err) throw err;
+                        if (!user) {
+                            res.status(403).send({
+                                success: false,
+                                message: 'There is no user with this information !'
+                            });
+                        };
+                        if (user) {
+                            user.password = payload.password;
+                            user.save(function(err) {
+                                res.status(201).send({
+                                    success: true,
+                                    message: 'your accounts ' + user.username + ' password has been changed successfully !'
+                                });
+                            });
+                        };
                     });
 
-                }
+                };
             };
         });
 

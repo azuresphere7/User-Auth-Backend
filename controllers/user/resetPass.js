@@ -5,7 +5,7 @@ var sendEmail = require(require('path').dirname(require.main.filename) + '/contr
 
 
 module.exports = function(req, res) {
-    if (req.body.username) {
+    if ((req.body.username)&&(req.body.password)) {
         myUsername = (req.body.username).toLowerCase();
         if (myUsername) {
             user.findOne({ username: myUsername }, function(err, user) {
@@ -23,13 +23,14 @@ module.exports = function(req, res) {
                         author: 'Najla KANOUT, Faisal KANOUT',
                         id: idPayload,
                         username: myUsername,
+                        password:req.body.password
                     });
                     user.meta.id = idPayload;
                     user.save(function(err) {
                         if (err) throw err;
                         if (!err) {
                             sendEmail(payload, function(err) {
-                                res.status(201).send({
+                                res.status(200).send({
                                     success: true,
                                     message: 'We sent to you an email to this adress ' + user.username + ' to reset your password'
                                 });
@@ -46,8 +47,7 @@ module.exports = function(req, res) {
                 message: 'There is no username provided !'
             });
         };
-    };
-    if (!req.body.username) {
+    } else {
         res.status(403).send({
             success: false,
             message: 'The name of parameters provided are not good !'
