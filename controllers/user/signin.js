@@ -31,7 +31,7 @@ module.exports = function(req, res) {
                         });
                         res.status(200).send({
                             success: true,
-                            message: 'Enjoy your token!',
+                            message: 'Take this token :) ',
                             token: token
                         });
                     };

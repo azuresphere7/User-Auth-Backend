@@ -19,7 +19,7 @@ var ctrlUserSendEmail	= require('./controllers/user/sendEmail');
 var ctrlUserVerifyEmail = require('./controllers/user/verifyEmail');
 var ctrlUserSignin		= require('./controllers/user/signin');
 var ctrlUserAuthenticate= require('./controllers/user/authenticate');
-
+var ctrlApiUserData 	= require('./controllers/user/apiUserProfile');
 
 // Prepare Express server
 //------------------------------------------
@@ -34,7 +34,7 @@ app.use('/api/v1.0',api);
 //------------------------------------------
 mongoose.connect(DATABASE,function(err){
 	if (err) throw err;
-	console.log("DATABASE is connceted successfully ! ");
+	if (!err) console.log("DATABASE is connceted successfully ! ");
 });
 
 
@@ -42,15 +42,17 @@ mongoose.connect(DATABASE,function(err){
 
 // The routes
 //------------------------------------------
-app.get('/',function(req,res){res.json({msg:'welcome to server'});});
-app.post('/signup', ctrlUserSignup);
 app.get('/verify', ctrlUserVerifyEmail);
+app.get('/',function(req,res){res.json({msg:'welcome to server'});});
+
+app.post('/signup', ctrlUserSignup);
+
 
 //with authentication
 //------------------------------------------
+api.post('/singin', ctrlUserSignin);
 api.use(ctrlUserAuthenticate);
-app.post('/singin', ctrlUserSignin);
-
+api.get('/user', ctrlApiUserData);
 
 
 
