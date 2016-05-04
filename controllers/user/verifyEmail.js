@@ -26,14 +26,21 @@ module.exports = function(req, res) {
                             });
                         };
                         if (user) {
-                            user.meta.validated = true;
-                            user.save(function(err) {
-                                res.status(201).send({
+                            if (user.meta.validated == true) {
+                                res.status(200).send({
                                     success: true,
-                                    message: 'your account ' + user.username + ' is now activated'
+                                    message: 'your account ' + user.username + ' is already activated'
                                 });
+                            } else {
+                                user.meta.validated = true;
+                                user.save(function(err) {
+                                    res.status(201).send({
+                                        success: true,
+                                        message: 'your account ' + user.username + ' is now activated'
+                                    });
 
-                            });
+                                });
+                            }
                         }
                     });
 
