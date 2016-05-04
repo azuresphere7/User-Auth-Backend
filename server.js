@@ -49,7 +49,7 @@ app.get('/',function(req,res){
 //------------------------------------------
 
 app.post('/signup', ctrlUserSignup);
-app.post('/authenticate', ctrlUserAuthenticate);
+//app.post('/authenticate', ctrlUserAuthenticate);
 app.get('/verify', ctrlUserVerifyEmail);
 
 

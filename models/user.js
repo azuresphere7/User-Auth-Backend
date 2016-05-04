@@ -1,11 +1,11 @@
-var bcrypt		= require('bcrypt');
-var mongoose	= require('mongoose');
-var schema 		= mongoose.Schema;
-var user 		= new schema({
-    username: { type: String, unique: true, required: true, unique: true },
-    password: String,
-    fullName: String,
-    image: String,
+var bcrypt = require('bcrypt');
+var mongoose = require('mongoose');
+var schema = mongoose.Schema;
+var user = new schema({
+    username: { type: String, unique: true, required: true },
+    password: { type: String, required: true },
+    fullName: { type: String, default: 'none' },
+    image: { type: String, default: 'none' },
     plates: [{
         plate: String,
         notif: [{
@@ -15,8 +15,8 @@ var user 		= new schema({
         }]
     }],
     meta: {
-        dateCreating: { type: Date, default: Date.now },
-        isValid: { type: Boolean, default: false },
+        creationDate: { type: Date, default: Date.now },
+        validated: { type: Boolean, default: false },
         id: Number
     }
 });
@@ -51,4 +51,3 @@ user.methods.comparePassword = function(pass, callback) {
     });
 };
 module.exports = mongoose.model('USER_DB_API_V1', user);
-
