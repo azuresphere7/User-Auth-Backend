@@ -1,7 +1,7 @@
-var config = require(require('path').dirname(require.main.filename) + '/config'); // get db config file
+var config = require(require('path').dirname(require.main.filename) + '/config'); 
 var mongoose = require('mongoose');
-var user = require(require('path').dirname(require.main.filename) + '/models/user'); // get the mongoose model
-var sendEmail = require(require('path').dirname(require.main.filename) + '/controllers/user/sendEmail'); // get the mongoose model
+var user = require(require('path').dirname(require.main.filename) + '/models/user'); 
+var sendEmail = require(require('path').dirname(require.main.filename) + '/controllers/user/sendEmail'); 
 
 
 module.exports = function(req, res) {
