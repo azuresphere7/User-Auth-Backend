@@ -10,7 +10,10 @@ The stack I am using is MEAN (MongoDB, Express, Angular, Node). *The Angular con
 ### What is this repository for? ###
 This repository represent the backend side of my personal project and it shows some of my skills in JavaScript
 
-It contains a REST API, enabling : sign-up, sign-in, email verification, reset password, access user profil. These functionalities are based on JSON Web Token JWT. This Api is based on Node ecosystem and its modules.
+It contains a REST API, enabling : **sign-up, sign-in, email verification, reset password, access user profil**. These functionalities are based on JSON Web Token JWT. This Api is based on Node ecosystem and its modules.
+
+### What modules are used ? ###
+**express**, **mongoose**, **cors**, **body-parser**, **jsonwebtoken**, **path**, **morgan**, **bcrypt** and **others** 
 
 
 ### How do I get set up? ###
@@ -26,4 +29,4 @@ If you would like to you test it you just need to :
 
 ### Who do I talk to? ###
 
-* Repo owner or admin : Faisal KANOUT, Master of science in software engineer.
+* Faisal KANOUT, Master of science in software engineer.[ www.kanout.com](www.kanout.com)
