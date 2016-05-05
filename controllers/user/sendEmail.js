@@ -13,7 +13,7 @@ var send = function(payload, callback) {
     });
     if (payloadSubject == 'changePassword') {
     	var mailOptions = {
-            from: '"FaisalKANOUT 👥" <foo@blurdybloop.com>', // sender address
+            from: '"FaisalKANOUT 👥" <f.knaout@gmail.com>', // sender address
             to: 'f.kanout@gmail.com', // list of receivers
             subject: 'Reset accounts password', // Subject line
             text: 'Hello', // plaintext body
@@ -27,7 +27,7 @@ var send = function(payload, callback) {
     };
     if (payloadSubject == 'verifyEmail') {
         var mailOptions = {
-            from: '"FaisalKANOUT 👥" <foo@blurdybloop.com>', // sender address
+            from: '"FaisalKANOUT 👥" <f.knaout@gmail.com>', // sender address
             to: 'f.kanout@gmail.com', // list of receivers
             subject: 'Email verification', // Subject line
             text: 'Hello', // plaintext body
