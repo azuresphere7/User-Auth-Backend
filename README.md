@@ -1,21 +1,25 @@
 # README #
+*Thank you for visiting my Bitbucket :+1:* 
 
-This is repository represent some of my skills on JavaScript in the Backend side in web development.
+I am working on a personal project based on a very cool idea - *as I think :)* - and here is a part of it.
+
+It is a beta version and I am still working on it in order to enhance my JS Backend skills.
+
+The stack I am using is MEAN (MongoDB, Express, Angular, Node). *The Angular concerns the Frontend* 
 
 ### What is this repository for? ###
-- This is a REST Api, for establishing (signup, signin, email verification, reset password, access user profile) . these processus based on JSON web token JWT.
+This repository represent the backend side of my personal project and it shows some of my skills in JavaScript
 
-- This is a beta version and Im still working on in order to enhance my Backend skills in JavaScript
-- This Api based on Node ecosystem and its modules 
+It contains a REST API, enabling : sign-up, sign-in, email verification, reset password, access user profil. These functionalities are based on JSON Web Token JWT. This Api is based on Node ecosystem and its modules.
 
- 
 
 ### How do I get set up? ###
 
-- If you would like to you test it you just need to :
-* 1. Download this repository.
+If you would like to you test it you just need to :
+
+1. Download this repository.
 1. Run **npm install** to install the necessary modules.
-1. Create(in the root folder) and fill the **config.js** file with the necessary variables (SECRET_EMAIL, SECRET, DATABASE).
+1. Create (in the root folder) the **config.js** file and fill it with the necessary variables (SECRET_EMAIL, SECRET, DATABASE).
 1. Run the **node server.js** .
 1. ENJOY :+1:
 
