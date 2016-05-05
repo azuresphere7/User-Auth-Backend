@@ -9,7 +9,7 @@ This README would normally document whatever steps are necessary to get your app
 - This Api based on Node ecosystem and its modules 
 
 - If you would like to you test it you just need to :
-1. Download this repository.
+* 1. Download this repository.
 1. Run **npm install** to install the necessary modules.
 1. Create(in the root folder) and fill the **config.js** file with the necessary variables (SECRET_EMAIL, SECRET, DATABASE).
 1. Run the **node server.js** .
