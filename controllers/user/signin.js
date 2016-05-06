@@ -27,10 +27,17 @@ module.exports = function(req, res) {
                         });
                     };
                     if (matched) {
+
                         if (user.meta.validated) {
-                            var token = jwt.sign(user, SECRET, {
+                            var userToSend = {
+                                username: user.username,
+                                idPayload: user.meta.id,
+                                type: 'c_user'
+                            };
+                            var token = jwt.sign(userToSend, SECRET, {
                                 expiresIn: 60
                             });
+
                             res.status(200).send({
                                 success: true,
                                 message: 'Take this token :) ',
