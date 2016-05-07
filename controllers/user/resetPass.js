@@ -1,3 +1,5 @@
+"use strict";
+
 var config = require(require('path').dirname(require.main.filename) + '/config'); 
 var mongoose = require('mongoose');
 var user = require(require('path').dirname(require.main.filename) + '/models/user'); 

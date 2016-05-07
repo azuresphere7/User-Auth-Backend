@@ -13,7 +13,7 @@ This repository represent the backend side of my personal project and it shows s
 It contains a REST API, enabling : **sign-up, sign-in, email verification, reset password, access user profil**. These functionalities are based on JSON Web Token JWT. This Api is based on Node ecosystem and its modules.
 
 ### What modules are used ? ###
-**express**, **mongoose**, **cors**, **body-parser**, **jsonwebtoken**, **path**, **morgan**, **bcrypt** and **others** 
+**express**, **mongoose**, **nodemailer**, **cors**, **body-parser**, **jsonwebtoken**, **path**, **morgan**, **bcrypt** and **others** 
 
 
 ### How do I get set up? ###

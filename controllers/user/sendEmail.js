@@ -1,3 +1,5 @@
+"use strict";
+
 var jwt = require('jsonwebtoken');
 var config = require(require('path').dirname(require.main.filename) + '/config'); // get db config file
 var nodemailer = require('nodemailer');

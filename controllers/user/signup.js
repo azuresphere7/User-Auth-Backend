@@ -1,3 +1,5 @@
+"use strict";
+
 var mongoose = require('mongoose');
 var user = require(require('path').dirname(require.main.filename) + '/models/user'); // get the mongoose model
 var sendEmail = require(require('path').dirname(require.main.filename) + '/controllers/user/sendEmail'); // get the mongoose model
