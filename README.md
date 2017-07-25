@@ -1,5 +1,4 @@
 # README #
-*Thank you for visiting my Bitbucket :+1:* 
 
 I am working on a personal project based on a very cool idea - *as I think :)* - and here is a part of it.
 
