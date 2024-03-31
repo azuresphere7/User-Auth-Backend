@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "lib": [ "ES2022" ],
+    "module": "CommonJS",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017"
+  }
+}
